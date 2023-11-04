@@ -19,6 +19,20 @@ const ProductsData = ({ item }: ItemProps) => {
   ));
 
   return (
+    <Head>
+          {/* Add your Google Tag Manager script here */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLY9PKENK7"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TLY9PKENK7');
+              `,
+            }}
+          />
+        </Head>
     <div className="w-full rounded-lg overflow-hidden">
       <div>
         <Link href={{ pathname: "/product", query: { _id: item?._id } }}>
