@@ -11,6 +11,20 @@ import toast, { Toaster } from "react-hot-toast";
 const SignleProduct = ({ product }: any) => {
   const dispatch = useDispatch();
   return (
+    <Head>
+          {/* Add your Google Tag Manager script here */}
+          <script async src="https://www.googletagmanager.com/gtag/js?id=G-TLY9PKENK7"></script>
+          <script
+            dangerouslySetInnerHTML={{
+              __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-TLY9PKENK7');
+              `,
+            }}
+          />
+        </Head>
     <div className="grid lg:grid-cols-2 gap-5 bg-white p-4 rounded-lg">
       <div>
         <Image
